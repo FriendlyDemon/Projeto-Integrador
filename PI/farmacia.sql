@@ -18,6 +18,7 @@ create table
         id serial primary key,
         usuario_id int references usuario (id),
         remedio_id int references remedio (id),
+        quantidade int,
         intervalo date
     );
 
