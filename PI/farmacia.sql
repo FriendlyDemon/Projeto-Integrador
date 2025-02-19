@@ -1,14 +1,24 @@
 create table
-    usuario (id serial primary key, nome varchar(100),);
+    usuario (
+        id serial primary key,
+        nome varchar(100),
+        email varchar(100)
+    );
 
 create table
-    remedio_base (id serial primary key, nome varchar(100),tipo_remedio varchar(20),);
+    remedio_base (
+        id serial primary key,
+        nome varchar(100),
+        tarja varchar(20),
+        via_consumo varchar(20)
+    );
 
 create table
     uso (
         id serial primary key,
         usuario_id int references usuario (id),
         remedio_id int references remedio (id),
+        quantidade int,
         intervalo date
     );
 
@@ -25,7 +35,6 @@ create table
         id serial primary key,
         usuario_id int references usuario (id),
         remedio_id int references remedio_base (id),
-        inicio date,
-        fim date
+        data_uso date,
+        tomado boolean
     );
-
