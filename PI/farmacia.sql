@@ -1,43 +1,41 @@
 create table
-    usuario (
-        id serial primary key,
+    "user" (
+        email varchar(100) unique primary key,
         nome varchar(100),
-        telefone varchar(20),
-        email varchar(100)
+        phone varchar(20)
     );
 
 create table
-    remedio_base (
-        id serial primary key,
+    drug_base (
+        id int unique primary key,
         nome varchar(100),
-        tarja varchar(20),
-        via_consumo varchar(20)
+        comsumption varchar(20)
     );
 
 create table
-    uso (
-        id serial primary key,
-        usuario_id int references usuario (id),
-        remedio_id int references remedio_base (id),
-        quantidade int,
-        intervalo int,
-        inicio date,
-        ativo boolean
+    use (
+        id int unique primary key,
+        user_id varchar(100) references "user" (email),
+        drug_id int references drug_base (id),
+        quantity int,
+        interval int,
+        bigining date,
+        active boolean
     );
 
 create table
-    remedio_ref (
-        id serial primary key,
-        remedio_id int references remedio_base (id),
-        quantidade int,
-        validade date
+    drug_ref (
+        id int unique primary key,
+        drug_id int references drug_base (id),
+        quantity int,
+        expiry_date date
     );
 
 create table
-    historico_remedios (
-        id serial primary key,
-        usuario_id int references usuario (id),
-        remedio_id int references remedio_base (id),
-        data_uso date,
-        tomado boolean
+    history_drugs (
+        id int unique primary key,
+        user_id varchar(100) references "user" (email),
+        drug_id int references drug_base (id),
+        date_use date,
+        taken boolean
     );
