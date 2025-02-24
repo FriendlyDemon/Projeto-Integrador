@@ -20,7 +20,9 @@ create table
         usuario_id int references usuario (id),
         remedio_id int references remedio_base (id),
         quantidade int,
-        intervalo int
+        intervalo int,
+        inicio date,
+        ativo boolean
     );
 
 create table
