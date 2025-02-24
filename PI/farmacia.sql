@@ -17,7 +17,7 @@ create table
         id int unique primary key,
         user_id varchar(100) references "user" (email),
         drug_id int references drug_base (id),
-        quantity int,
+        quantity float,
         interval int,
         beginning date,
         active boolean
@@ -27,7 +27,7 @@ create table
     drug_ref (
         id int unique primary key,
         drug_id int references drug_base (id),
-        quantity int,
+        quantity float,
         expiry_date date
     );
 
