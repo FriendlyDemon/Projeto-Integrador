@@ -2,6 +2,7 @@ create table
     usuario (
         id serial primary key,
         nome varchar(100),
+        telefone varchar(20),
         email varchar(100)
     );
 
@@ -17,9 +18,9 @@ create table
     uso (
         id serial primary key,
         usuario_id int references usuario (id),
-        remedio_id int references remedio (id),
+        remedio_id int references remedio_base (id),
         quantidade int,
-        intervalo date
+        intervalo int
     );
 
 create table
