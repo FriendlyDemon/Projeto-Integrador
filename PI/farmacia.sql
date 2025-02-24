@@ -1,14 +1,14 @@
 create table
     "user" (
         email varchar(100) unique primary key,
-        nome varchar(100),
+        name varchar(100),
         phone varchar(20)
     );
 
 create table
     drug_base (
         id int unique primary key,
-        nome varchar(100),
+        name varchar(100),
         comsumption varchar(20)
     );
 
@@ -19,7 +19,7 @@ create table
         drug_id int references drug_base (id),
         quantity int,
         interval int,
-        bigining date,
+        beginning date,
         active boolean
     );
 
