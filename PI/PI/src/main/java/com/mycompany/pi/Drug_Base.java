@@ -10,7 +10,13 @@ package com.mycompany.pi;
  */
 public class Drug_Base {
 
-    int id;
-    String name;
-    String comsumption;
+    private int id;
+    private String name;
+    private String comsumption;
+
+    Drug_Base(int ID, String Name, String Comsumption) {
+        id = ID;
+        name = Name;
+        comsumption = Comsumption;
+    }
 }

@@ -10,8 +10,15 @@ package com.mycompany.pi;
  */
 public class Drug_Ref {
 
-    int id;
-    int drug_id;
-    double quantity;
-    String expiry_date;
+    private int id;
+    private int drug_id;
+    private double quantity;
+    private String expiry_date;
+
+    Drug_Ref(int ID, int Drug, double Quantity, String Expiry) {
+        id = ID;
+        drug_id = Drug;
+        quantity = Quantity;
+        expiry_date = Expiry;
+    }
 }

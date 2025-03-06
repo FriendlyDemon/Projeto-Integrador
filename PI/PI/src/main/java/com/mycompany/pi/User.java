@@ -10,7 +10,13 @@ package com.mycompany.pi;
  */
 public class User {
 
-    String email;
-    String name;
-    String phone;
+    private String email;
+    private String name;
+    private String phone;
+
+    User(String Email, String Name, String Phone) {
+        email = Email;
+        name = Name;
+        phone = Phone;
+    }
 }

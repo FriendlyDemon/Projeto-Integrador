@@ -10,11 +10,21 @@ package com.mycompany.pi;
  */
 public class Use {
 
-    int id;
-    String user_id;
-    int drug_id;
-    double quantity;
-    int interval;
-    String beginning;
-    boolean active;
+    private int id;
+    private String user_id;
+    private int drug_id;
+    private double quantity;
+    private int interval;
+    private String beginning;
+    private boolean active;
+
+    Use(int ID, String User, int Drug, double Quantity, int Interval, String Beginning, boolean Active) {
+        id = ID;
+        user_id = User;
+        drug_id = Drug;
+        quantity = Quantity;
+        interval = Interval;
+        beginning = Beginning;
+        active = Active;
+    }
 }

@@ -10,9 +10,18 @@ package com.mycompany.pi;
  */
 public class History_Drugs {
 
-    int id;
-    String user_id;
-    int drug_id;
-    String date_use;
-    boolean taken;
+    private int id;
+    private String user_id;
+    private int drug_id;
+    private String date_use;
+    private boolean taken;
+
+    History_Drugs(int ID, String User, int Drug, String Date_use, boolean Taken) {
+        id = ID;
+        user_id = User;
+        drug_id = Drug;
+        date_use = Date_use;
+        taken = Taken;
+    }
+
 }
