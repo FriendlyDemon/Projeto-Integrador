@@ -9,6 +9,7 @@ package com.mycompany.pi;
  */
 public class PI {
 
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
 
         Drug_Base omeprasol = new Drug_Base(1, "Omeprasol", "oral");
