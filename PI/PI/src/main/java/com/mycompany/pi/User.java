@@ -38,7 +38,7 @@ public class User {
         this.phone = Phone;
     }
 
-    User(String Email, String Name, String Phone) {
+    public User(String Email, String Name, String Phone) {
         email = Email;
         name = Name;
         phone = Phone;

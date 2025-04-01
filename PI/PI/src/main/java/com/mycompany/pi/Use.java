@@ -74,7 +74,7 @@ public class Use {
         this.active = Active;
     }
 
-    Use(int ID, String User, int Drug, double Quantity, int Interval, String Beginning, boolean Active) {
+    public Use(int ID, String User, int Drug, double Quantity, int Interval, String Beginning, boolean Active) {
         id = ID;
         user_id = User;
         drug_id = Drug;
